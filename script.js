@@ -14,7 +14,6 @@ function convertToRoman(num) {
 	let result = '';
 
 	for (const [symbol, value] of obj) {
-    // While the current value fits into the remaining number
     while (num >= value) {
       result += symbol;
       num -= value;
