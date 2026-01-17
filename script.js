@@ -12,14 +12,16 @@ function convertToRoman(num) {
 
   //your code here
 	let result = '';
+	const symbols = Object.values(obj);
+	for (let i = 0; i < symbols.length; i++) {
+	    let [symbol, value] = symbols[i];
 
-	for (const [symbol, value] of obj) {
-    while (num >= value) {
-      result += symbol;
-      num -= value;
-    }
-  }
-
+	    // Logic for standard Roman Numerals
+	    while (num >= value) {
+	      result += symbol;
+	      num -= value;
+	    }
+	}
   return result;
 
 }
